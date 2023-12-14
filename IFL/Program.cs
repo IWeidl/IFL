@@ -10,6 +10,8 @@ namespace IFL
     {
         static void Main(string[] args)
         {
+            Engine engine = new Engine();
+            engine.LoadScenesFromFile("Sandbox/DummyGame.ifl");
         }
     }
 }

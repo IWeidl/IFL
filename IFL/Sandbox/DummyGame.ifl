@@ -5,7 +5,7 @@ Options: [
 	Hangar: {
 		Text: Head towards the hangar.
 		Conditions: [
-			:HEALTH > 1,
+			:HEALTH > 1
 			:RANK == PILOT
 		]
 		Actions: [ ]
@@ -18,10 +18,18 @@ Text: You are now in the ship's hangar. What will you do?
 Options: [
 	Bridge: {
 		Text: Head back towards the bridge.
-		Conditions: [ ]
+		Conditions: [ 
+			:HEALTH > 1
+			:RANK == PILOT
+		]
+		Actions: [ ]
+	}
+	Airlock: {
+		Text: Jump out the airlock.
+		Conditions [ ]
 		Actions: [
-			HEALTH = 0,
-			LIVES - 1
+			:HEALTH = 0
+			:LIVES - 1
 		]
 	}
 ]
