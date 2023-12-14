@@ -1,0 +1,27 @@
+﻿Name: Bridge
+Characters: Tom, Dick, Harry
+Text: You have entered the ship's main bridge. What will you do?
+Options: [
+	Hangar: {
+		Text: Head towards the hangar.
+		Conditions: [
+			:HEALTH > 1,
+			:RANK == PILOT
+		]
+		Actions: [ ]
+	}
+]
+:::
+Name: Hangar
+Characters: Fred
+Text: You are now in the ship's hangar. What will you do?
+Options: [
+	Bridge: {
+		Text: Head back towards the bridge.
+		Conditions: [ ]
+		Actions: [
+			HEALTH = 0,
+			LIVES - 1
+		]
+	}
+]
